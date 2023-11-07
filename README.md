@@ -10,7 +10,7 @@ $ pip install -r requirements.txt
 
 
 ## api  key
-自身のOpenAIのAPI Keyを取得して登録してください
+OpenAIから自身アカウントのAPI Keyを取得して利用してください
 ```
 api_key = 'APIキーをここに入力'
 ```
