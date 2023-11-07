@@ -18,6 +18,7 @@ api_key = 'APIキーをここに入力'
 ```
 $ streamlit run app.py
 ```
+[http://localhost:8501/](http://localhost:8501/)へブラウザからアクセス
 
 ##
 2023-11-07 時点では `gpt-4-vision-preview` はまだ `preview`なのですぐに Rate Limitになりがち
