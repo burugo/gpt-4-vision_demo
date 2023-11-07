@@ -6,13 +6,12 @@ import base64
 # APIキーを設定
 api_key = 'APIキーをここに入力'
 
-# OpenAIクライアントを初期化
+# OpenAIクライアント初期化
 openai.api_key = api_key
 
-# Streamlitアプリケーションのタイトルを設定
 st.title("GPT-4-vision sample bot")
 
-# ユーザーからの入力を受け取る
+#プロンプト入力
 prompt = st.text_input("プロンプトを入力してください:")
 
 # 画像アップロード
@@ -24,7 +23,7 @@ if image_file:
     # Base64エンコード
     image_base64 = base64.b64encode(image_data).decode()
     
-    #サムネイル表示
+    #サムネイルを表示
     st.image(image_data, caption="アップロード画像", use_column_width=True)
 
 
@@ -40,7 +39,7 @@ if st.button("生成") and image_file:
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": prompt},
-                    {"role": "assistant", "content": image_base64},  # 画像データをバイナリ形式で渡す
+                    {"role": "assistant", "content": image_base64},  # 画像データをバイナリ形式で渡す #画像のURLで渡しても良いが取得できないケースもあるので
                 ],
                 max_tokens=2000,
             )
