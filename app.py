@@ -10,7 +10,7 @@ api_key = 'APIキーをここに入力'
 openai.api_key = api_key
 
 # Streamlitアプリケーションのタイトルを設定
-st.title("GPT-4-vision Chatbot")
+st.title("GPT-4-vision sample bot")
 
 # ユーザーからの入力を受け取る
 prompt = st.text_input("プロンプトを入力してください:")
